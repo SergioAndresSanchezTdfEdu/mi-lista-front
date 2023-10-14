@@ -1,0 +1,13 @@
+.borde {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.table {
+> :not(caption) > * > * {
+    border-right-width: var(--bs-border-width);
+    border-left-width: var(--bs-border-width);
+    border-top-width: var(--bs-border-width);
+}
+}

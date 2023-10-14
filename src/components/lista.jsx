@@ -1,4 +1,5 @@
 import React, { useState , useEffect } from 'react';
+import "./lista.css";
 
 const Lista = () => {
 
@@ -16,11 +17,26 @@ const Lista = () => {
     return(
         <>
             <h1>Lista de Personas</h1>
-            <ul>
-                {personas.map((persona, index) => (
-                    <li key={index}>{persona.nombre}</li>
-                ))}
-            </ul>
+            <div className="borde">
+                <table className="table table-primary table-striped vertical">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Nacionalidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {personas.map((persona, index) => (
+                        <tr key={index}>
+                            <td >{persona.nombre}</td>
+                            <td>{persona.apellido}</td>
+                            <td>{persona.nacionalidad}</td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
+            </div>
         </>
     )
 }
